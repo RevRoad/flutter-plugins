@@ -37,4 +37,7 @@ abstract class GoogleIdentity {
 
   /// Server auth code used to access Google Login
   String? get serverAuthCode;
+
+  /// List of scopes granted by the signed in user
+  List<String>? get grantedScopes;
 }

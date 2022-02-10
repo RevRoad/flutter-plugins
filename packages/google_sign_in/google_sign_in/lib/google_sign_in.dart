@@ -46,7 +46,9 @@ class GoogleSignInAccount implements GoogleIdentity {
         id = data.id,
         photoUrl = data.photoUrl,
         serverAuthCode = data.serverAuthCode,
-        _idToken = data.idToken {
+        _idToken = data.idToken,
+        grantedScopes = data.grantedScopes
+  {
     assert(id != null);
   }
 
@@ -72,6 +74,9 @@ class GoogleSignInAccount implements GoogleIdentity {
 
   @override
   final String? serverAuthCode;
+
+  @override
+  final List<String>? grantedScopes;
 
   final String? _idToken;
   final GoogleSignIn _googleSignIn;
@@ -139,12 +144,13 @@ class GoogleSignInAccount implements GoogleIdentity {
         id == otherAccount.id &&
         photoUrl == otherAccount.photoUrl &&
         serverAuthCode == otherAccount.serverAuthCode &&
+        grantedScopes == otherAccount.grantedScopes &&
         _idToken == otherAccount._idToken;
   }
 
   @override
   int get hashCode =>
-      hashValues(displayName, email, id, photoUrl, _idToken, serverAuthCode);
+      hashValues(displayName, email, id, photoUrl, _idToken, serverAuthCode, grantedScopes);
 
   @override
   String toString() {
@@ -153,7 +159,8 @@ class GoogleSignInAccount implements GoogleIdentity {
       'email': email,
       'id': id,
       'photoUrl': photoUrl,
-      'serverAuthCode': serverAuthCode
+      'serverAuthCode': serverAuthCode,
+      'grantedScopes': grantedScopes,
     };
     return 'GoogleSignInAccount:$data';
   }

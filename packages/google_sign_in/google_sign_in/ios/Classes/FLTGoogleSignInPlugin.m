@@ -248,7 +248,8 @@ static FlutterError *getFlutterError(NSError *error) {
         @"email" : user.profile.email ?: [NSNull null],
         @"id" : user.userID ?: [NSNull null],
         @"photoUrl" : [photoUrl absoluteString] ?: [NSNull null],
-        @"serverAuthCode" : user.serverAuthCode ?: [NSNull null]
+        @"serverAuthCode" : user.serverAuthCode ?: [NSNull null],
+        @"grantedScopes": user.grantedScopes ?: [NSNull null]
       }
                          error:nil];
     }
