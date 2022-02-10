@@ -23,7 +23,11 @@ flutter:
 dependencies:
   flutter:
     sdk: flutter
-  google_sign_in_platform_interface: ^2.1.0
+  google_sign_in_platform_interface:
+    git:
+      url: https://github.com/revroad-dev/flutter-plugins
+      path: packages/google_sign_in/google_sign_in_platform_interface
+      ref: e2d5cab0578ee317c35161db273bd3c0720b20b1
   google_sign_in_web: ^0.10.0
 
 dev_dependencies:
