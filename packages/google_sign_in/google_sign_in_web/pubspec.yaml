@@ -26,7 +26,7 @@ dependencies:
     git:
       url: https://github.com/RevRoad/flutter-plugins
       path: packages/google_sign_in/google_sign_in_platform_interface
-      ref: 9730363d04ddeac1326ffb503750d5e45e80e3da
+      ref: e4e32e361a0b482191ecdcb3d2b976a3acd066fa
   js: ^0.6.3
   pedantic: ^1.10.0
 
