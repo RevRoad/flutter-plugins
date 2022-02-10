@@ -27,12 +27,12 @@ dependencies:
     git:
       url: https://github.com/RevRoad/flutter-plugins
       path: packages/google_sign_in/google_sign_in_platform_interface
-      ref: e4e32e361a0b482191ecdcb3d2b976a3acd066fa
+      ref: add-granted-scopes
   google_sign_in_web:
     git:
       url: https://github.com/RevRoad/flutter-plugins
       path: packages/google_sign_in/google_sign_in_web
-      ref: e4e32e361a0b482191ecdcb3d2b976a3acd066fa
+      ref: add-granted-scopes
 
 dev_dependencies:
   flutter_driver:
