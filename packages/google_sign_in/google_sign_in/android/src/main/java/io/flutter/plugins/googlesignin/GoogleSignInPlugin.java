@@ -503,6 +503,11 @@ public class GoogleSignInPlugin implements MethodCallHandler, FlutterPlugin, Act
       if (account.getPhotoUrl() != null) {
         response.put("photoUrl", account.getPhotoUrl().toString());
       }
+      List<String> grantedScopes = new ArrayList<String>();
+      for (Scope scope : account.getGrantedScopes()) {
+        grantedScopes.add(scope.toString());
+      }
+      response.put("grantedScopes", grantedScopes);
       finishWithSuccess(response);
     }
 
