@@ -9,7 +9,6 @@ GoogleSignInUserData? getUserDataFromMap(Map<String, dynamic>? data) {
   if (data == null) {
     return null;
   }
-  List<String> grantedScopes = data['grantedScopes'].map<String>((e) => e!.toString()).toList();
   return GoogleSignInUserData(
       email: data['email']! as String,
       id: data['id']! as String,
@@ -17,7 +16,7 @@ GoogleSignInUserData? getUserDataFromMap(Map<String, dynamic>? data) {
       photoUrl: data['photoUrl'] as String?,
       idToken: data['idToken'] as String?,
       serverAuthCode: data['serverAuthCode'] as String?,
-      grantedScopes: grantedScopes);
+      grantedScopes: data['grantedScopes'] as List<String>);
 }
 
 /// Converts token data coming from native code into the proper platform interface type.
